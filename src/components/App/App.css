@@ -1,40 +1,9 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  flex-direction: column;
+  text-align: center;
 }
 /**********Add from stockexchange****************/
 /*$lightChange: 25%;
@@ -56,7 +25,7 @@ $borderRadius: 6px;
     box-shadow: 1px 1px 0 black;
   }
 }
-
+*/
 html, body {
 	height: 100%;
 }
@@ -64,7 +33,16 @@ html, body {
 body {
   background: linear-gradient(to top, #403B4A , #E7E9BB);
 }
-
+.row{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 15%;
+  padding: 0.8rem;
+}
+.columns{
+  padding: 0.4rem 0;
+}
 .nav-button {
   text-decoration: none;
   color: green;
@@ -73,23 +51,24 @@ body {
   font-weight: 900;
   font-size: 1.2rem;
   margin-bottom: 16px;
-  display: inline-block;
+  display: flex;
+  justify-content: center;
   width: 100%;
-  border-radius: $borderRadius;
+  border-radius: 6px;
   letter-spacing: 1px;
   box-shadow: 2px 2px 0 black;
 }
-
+/*
 .nav-button[disabled] {
   color: crimson;
 }
-
+*/
 .calculation-method { 
   background: linear-gradient(to top, #abbaab ,#ffffff); 
 }
-
+/*
 @include addPseudoClasses('.calculation-method', #344334);
-
+*/
 h1 {
   text-align: center;
   margin: 20px 0 30px;
@@ -97,21 +76,21 @@ h1 {
 }
 
 .attention {
-  background: linear-gradient(to top, darken(#ED4264, $lightChange), #FFEDBC);
+  background: linear-gradient(to top, darken(#ED4264, 25%), #FFEDBC);
   text-transform: uppercase;
   color: white;
 }
-
+/*
 @include addPseudoClasses('.attention', red);
-
+*/
 .invalid-input {
   border-color: red !important;
   background-color: pink !important;
 }
 
-input[type=text] {
-  border-radius: $borderRadius !important;
+input{
+  border-radius: 6px !important;
   box-shadow: inset 1px 1px 0 black;
   padding-left: 20px;
   font-weight: 900;
-}*/
+}

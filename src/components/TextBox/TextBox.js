@@ -9,9 +9,9 @@ class TextBox extends React.Component{
         this.notify = this.notify.bind(this);
     }
     notify () {
-        let item = this.inputElement;
-
-        this.props.changeHandler(/*item.dataset.variable*/1, item);
+        let item = this.refs.inputElement;
+        //console.log(item.dataset.variable);
+        this.props.changeHandler(item.dataset.variable, item);
     }
     render () {   
         return (
@@ -19,7 +19,7 @@ class TextBox extends React.Component{
                 ref={ this.props.id }>
                 <input type="text"
                         placeholder={ this.props.placeholder} 
-                        ref={this.inputElement} 
+                        ref="inputElement"
                         className={ this.props.textBoxClass }
                         disabled={ this.props.disabled } 
                         onChange={ this.notify }

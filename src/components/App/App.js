@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import TextBox from '../TextBox/TextBox';
 import Button from '../Buttons/Buttons';
@@ -16,8 +15,9 @@ class App extends React.Component{
       bClass: 'input-box',
       aDisabled: false,
       bDisabled: false,
-      buttonsDisabled: 'disabled' };
-    }
+      buttonsDisabled: 'disabled'
+    };
+  }
   operations = {
     'add': function() {
       return this.state.a + this.state.b;
@@ -38,7 +38,7 @@ class App extends React.Component{
   updateNumbers (variable, reference) { 
     var val = parseFloat(reference.value);
     var varClass = [variable + 'Class'];
-    
+    //console.log(variable);
     if (typeof val === 'number' && !isNaN(val)) {
       if (this.state[variable + 'Class'].indexOf('invalid-input') > -1) {
         this.setState({
